@@ -1,5 +1,9 @@
 # jax-soft-dtw-div
 
+- [About](#about)
+- [Usage](#usage)
+- [References](#references)
+
 ## About
 Implementation of Soft-DTW [1] and Soft-DTW Divergence [2] in Jax. 
 
@@ -31,7 +35,8 @@ sdtw_div_grad_fn = jax.value_and_grad(partial(soft_dtw_divergence, gamma=1.0))
 value, grad = sdtw_div_grad_fn(X, Y)
 ```
 
-Compositions with jax functions like `grad`, `jit`, `vmap`, etc are supported. 
+Compositions with jax functions like `grad`, `jit`, `vmap`, etc are supported.   
+Results on sample inputs were matched with the official implementation.
 
 
 ## References
